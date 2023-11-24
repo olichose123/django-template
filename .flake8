@@ -1,0 +1,9 @@
+[flake8]
+exclude =
+    *.egg-info
+    .git
+    .pytest_cache
+    __pycache__
+    htmlcov
+    */migrations/
+ignore = F812,H101,H202,H233,H301,H501,Q000,E501,F401,W503,C812,E501
