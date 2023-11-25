@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: ./docker/Dockerfile
     env_file:
-      - local.env
+      - .env
     command: python manage.py runserver 0.0.0.0:8080
     ports:
       - 8080:8080
@@ -19,7 +19,7 @@ services:
   postgres:
     image: postgres:13
     env_file:
-      - local.env
+      - .env
 
   redis:
     image: redis:6.2.4
