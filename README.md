@@ -23,8 +23,9 @@
   * run `docker compose up`
   * app will run with cache and with postgres
 
-* run in production
+* run in prod
   * make sure your .env file has `DJANGO_SETTINGS_MODULE=settings.prod`
   * make sure your .env file's `DJANGO_SECRET_KEY` is unique
   * make sure default values are unique, or setup as secrets in your deployment target
   * make sure .env hosts and ports are valid for your deployment network setup (redis, postgres)
+  * do not use compose, instead use the image and gunicorn (see `docker/Dockerfile`)
