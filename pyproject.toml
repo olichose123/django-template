@@ -8,7 +8,6 @@ authors = ["olichose123 <oli.banville@gmail.com>"]
 python = "^3.10"
 Django = "^4.2.6"
 djangorestframework = "^3.14.0"
-psycopg2-binary = "^2.9.9"
 redis = "^5.0.1"
 gunicorn = "^21.2.0"
 django-db-prefix = "^1.0.5"
