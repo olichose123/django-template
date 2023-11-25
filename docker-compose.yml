@@ -13,13 +13,6 @@ services:
       - 8080:8080
     volumes:
       - .:/usr/src
-    depends_on:
-      - postgres
-
-  postgres:
-    image: postgres:13
-    env_file:
-      - local.env
 
   redis:
     image: redis:6.2.4
