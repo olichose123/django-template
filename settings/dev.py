@@ -3,6 +3,30 @@ import os
 
 DEBUG = os.environ.get("DJANGO_DEBUG", "False") == "True"
 ALLOWED_HOSTS = ["*"]
+CSRF_COOKIE_SAMESITE = "None"
+CSRF_COOKIE_SECURE = True
+CSRF_TRUSTED_ORIGINS = ["https://*"]
+
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_PREFLIGHT_MAX_AGE = 0
+CORS_ALLOW_HEADERS = (
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-xsrf-token",
+    "x-requested-with",
+    "content-disposition",
+    "cache-control",
+    "set-cookie",
+    "Access-Control-Allow-Origin",
+)
 
 DATABASES = {
     "default": {
@@ -26,7 +50,6 @@ CACHES = {
 }
 
 # Storage, static and media
-DEFAULT_FILE_STORAGE = "django.core.files.storage.FileSystemStorage"
 STATIC_URL = "/static/"
 STATIC_ROOT = "/usr/src/static/"
 MEDIA_URL = "/media/"
@@ -41,4 +64,13 @@ REST_FRAMEWORK = {
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+}
+
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
 }
