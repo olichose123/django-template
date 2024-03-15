@@ -14,7 +14,7 @@
   *  add app to `settings.base.py` in LOCAL_APPS as `apps.<app_name>`
 
 * run in local mode
-  * make sure your .env file has `DJANGO_SETTINGS_MODULE=settings.local`
+  * make sure your .env file has `DJANGO_SETTINGS_MODULE=settings.dev`
   * run `docker compose up`
   * app will run without cache and with sqlite
 

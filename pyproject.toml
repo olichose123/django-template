@@ -7,7 +7,6 @@ authors = ["person"]
 [tool.poetry.dependencies]
 python = "^3.10"
 Django = "^4.2.6"
-#whitenoise = "^6.6.0" #serve static files by itself
 #Pillow = "^10.1.0" #store image files
 #django-storages = { extras = ["s3"], version = "^1.14.2" } #store files to s3
 djangorestframework = "^3.14.0"
@@ -20,6 +19,7 @@ drf-spectacular = "^0.27.1"
 djangorestframework-simplejwt = "^5.3.1"
 pytest = "^8.1.1"
 pytest-django = "^4.8.0"
+whitenoise = "^6.6.0"
 
 [tool.poetry.dev-dependencies]
 black = "^23.10.1"
@@ -30,5 +30,5 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "settings.local"
+DJANGO_SETTINGS_MODULE = "settings.dev"
 python_files = ["tests.py", "test_*.py", "*_test.py", "testing/python/*.py"]

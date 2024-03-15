@@ -485,10 +485,21 @@ category = "main"
 optional = false
 python-versions = ">=3.6"
 
+[[package]]
+name = "whitenoise"
+version = "6.6.0"
+description = "Radically simplified static file serving for WSGI applications"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+brotli = ["brotli"]
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "d3a4d1668fd2a0a7941bb7b9aa39d1b6f63d1f978428a3992cfd0f4ed41911ba"
+content-hash = "149abcfac0e2c9fc1d1b063345717d421aa96e97ef579060e32857f62c0834d6"
 
 [metadata.files]
 asgiref = []
@@ -532,3 +543,4 @@ tomli = []
 typing-extensions = []
 tzdata = []
 uritemplate = []
+whitenoise = []
