@@ -1,34 +1,36 @@
-[tool.poetry]
+[project]
 name = "project"
 version = "0.1.0"
 description = ""
-authors = ["person"]
+authors = [{ name = "Olivier Banville", email = "olivier@banville.net" }]
+readme = "README.md"
+requires-python = "^3.10"
+
+[tool.poetry]
+package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.10"
-Django = "^4.2.6"
-#Pillow = "^10.1.0" #store image files
-#django-storages = { extras = ["s3"], version = "^1.14.2" } #store files to s3
-djangorestframework = "^3.14.0"
-psycopg2-binary = "^2.9.9"
-redis = "^5.0.3"
-gunicorn = "^21.2.0"
+django = "^5.1.6"
+djangorestframework = "^3.15.2"
+drf-spectacular = "^0.28.0"
+djangorestframework-simplejwt = "^5.4.0"
+psycopg2-binary = "^2.9.10" # for postgres support
+gunicorn = "^23.0.0" # for production server
+redis = "^5.2.1"
 django-redis = "^5.4.0"
-django-cors-headers = "^4.3.1"
-drf-spectacular = "^0.27.1"
-djangorestframework-simplejwt = "^5.3.1"
-pytest = "^8.1.1"
-pytest-django = "^4.8.0"
-whitenoise = "^6.6.0"
+django-cors-headers = "^4.7.0"
+pytest = "^8.3.4"
+pytest-django = "^4.10.0"
+whitenoise = "^6.9.0"
 
-[tool.poetry.dev-dependencies]
-black = "^23.10.1"
-flake8 = "^6.1.0"
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+flake8 = "^7.1.2"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "settings.dev"
+DJANGO_SETTINGS_MODULE = "settings.local"
 python_files = ["tests.py", "test_*.py", "*_test.py", "testing/python/*.py"]

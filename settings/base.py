@@ -23,8 +23,8 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    # "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -72,7 +72,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 DEFAULT_DATETIME_FORMAT = "%Y-%m-%dT%H:%M:%S"
 LANGUAGE_CODE = "en-us"
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/New_York"
 USE_I18N = True
 USE_TZ = True
 USE_THOUSAND_SEPARATOR = True
