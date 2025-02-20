@@ -7,7 +7,7 @@ RUN apt-get update \
     && apt-get install -y \
     gcc \
     netcat-traditional \
-    && pip install "poetry~=1.1.13" \
+    && pip install "poetry~=2.1.1" \
     && poetry config virtualenvs.create false \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists
@@ -15,7 +15,7 @@ RUN apt-get update \
 EXPOSE 8080
 COPY poetry.lock pyproject.toml ./
 
-RUN poetry install --no-dev;
+RUN poetry install --only main;
 
 
 # Setup entry point
