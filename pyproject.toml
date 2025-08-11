@@ -10,22 +10,22 @@ requires-python = "^3.10"
 package-mode = false
 
 [tool.poetry.dependencies]
-django = "^5.1.6"
-djangorestframework = "^3.15.2"
+django = "^5.2.5"
+djangorestframework = "^3.16.1"
 drf-spectacular = "^0.28.0"
-djangorestframework-simplejwt = "^5.4.0"
+djangorestframework-simplejwt = "^5.5.1"
 psycopg2-binary = "^2.9.10" # for postgres support
 gunicorn = "^23.0.0" # for production server
-redis = "^5.2.1"
-django-redis = "^5.4.0"
+redis = "^6.4.0"
+django-redis = "^6.0.0"
 django-cors-headers = "^4.7.0"
-pytest = "^8.3.4"
-pytest-django = "^4.10.0"
+pytest = "^8.4.1"
+pytest-django = "^4.11.1"
 whitenoise = "^6.9.0"
 
 [tool.poetry.group.dev.dependencies]
 black = "^25.1.0"
-flake8 = "^7.1.2"
+flake8 = "^7.3.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
